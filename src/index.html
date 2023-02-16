@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Domain Names Generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -13,11 +13,28 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center mt-5">
-      <h1>Domain Name Generator</h1>
-      <div class="row mt-5 justify-content-center">
-        <div class="col-10">
-          <button id="createDomainNames">Create Random Domain Names</button>
+    <div class="container-fluid mt-2">
+      <div class="row mt-5 p-5">
+        <div class="col-6">
+          <div class="row">
+            <h1 class="mb-2 pt-5">Domain Name Generator</h1>
+            <h3>Make your own domain name.</h3>
+          </div>
+          <div class="row">
+            <div class="col-12">
+                <button
+                  type="button"
+                  id="createDomainNames"
+                  class="btn btn-primary mt-5"
+                >
+                  Create Domain Names
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-6 pt-5">
+          <div class="p-2" id="domains"></div>
         </div>
       </div>
     </div>

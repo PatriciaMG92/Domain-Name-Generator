@@ -1,1 +1,20 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background: rgb(0, 19, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 19, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(120, 0, 255, 1) 100%
+  );
+  color: white;
+}
+
+#domains {
+  border: 1px solid #442daa;
+  height: 300px;
+  overflow-y: scroll;
+  background: rgba(9, 9, 121, 1) 35%;
+  color: white;
+}
