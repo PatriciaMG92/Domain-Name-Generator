@@ -17,11 +17,49 @@
       <div class="row mt-5 p-5">
         <div class="col-6">
           <div class="row">
-            <h1 class="mb-2 pt-5">Domain Name Generator</h1>
-            <h3>Make your own domain name.</h3>
+            <h1 class="mb-4 pt-1">Domain Name Generator</h1>
+            <h3 class="mb-4">Make your own domain name.</h3>
           </div>
           <div class="row">
             <div class="col-12">
+              <form>
+                <div class="row">
+                  <label for="exampleFormControlInput1" class="form-label mb-3"
+                  >First let´s write a good pronoun to make your domain, for
+                  example: "our", "the", "my",... :</label
+                >
+                  <div class="col-4">
+                    <input type="text" class="form-control" placeholder="Pronoun1"  id="pronoun1" value="">
+                  </div>
+                  <div class="col-4">
+                    <input type="text" class="form-control" placeholder="Pronoun2"  id="pronoun2" value="">
+                  </div>
+                </div>
+                <div class="row mt-3 mb-2">
+                  <label for="exampleFormControlInput2" class="form-label mb-3"
+                  >Now you have to put some flashy adjective to make your
+                  domain, for example: "bigger","best", "great", "super"...
+                  :</label
+                >
+                  <div class="col-4">
+                    <input type="text" class="form-control" placeholder="Adjective1"  id="adjective1" value="">
+                  </div>
+                  <div class="col-4">
+                    <input type="text" class="form-control" placeholder="Adjective2"  id="adjective2" value="">
+                  </div>
+                </div>
+                <div class="row mt-3 mb-2">
+                  <label for="exampleFormControlInput2" class="form-label mb-3"
+                  >It's time to choose a powerful name to make your domain!
+                  (Examples: "jogger","racoon", "panda", "geek"...)</label
+                >
+                  <div class="col-4">
+                    <input type="text" class="form-control" placeholder="Name1"  id="name1" value="">
+                  </div>
+                  <div class="col-4">
+                    <input type="text" class="form-control" placeholder="Name2"  id="name2" value="">
+                  </div>
+                </div>
                 <button
                   type="button"
                   id="createDomainNames"
@@ -29,11 +67,13 @@
                 >
                   Create Domain Names
                 </button>
+              </form>
+                
               </div>
             </form>
           </div>
         </div>
-        <div class="col-6 pt-5">
+        <div class="col-6 mt-5 pt-5">
           <div class="p-2" id="domains"></div>
         </div>
       </div>
