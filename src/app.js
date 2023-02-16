@@ -14,8 +14,6 @@ import "./assets/img/4geeks.ico";
 //   console.log("Hello Rigo from the console!");
 // };
 
-//usar for.each y .map juntos??
-
 const pronouns = [];
 const adjectives = [];
 const nouns = [];
@@ -32,30 +30,43 @@ function getValue(idInput) {
 }
 
 function getPronouns() {
-  const pronounOne = getValue("pronoun1");
-  const pronounTwo = getValue("pronoun2");
-  pronouns.push(pronounOne, pronounTwo);
-  console.log(pronouns);
+  if (getValue("pronoun1") === "" || getValue("pronoun2") === 0) {
+    alert("Please, fill all the fields");
+  } else {
+    const pronounOne = getValue("pronoun1");
+    const pronounTwo = getValue("pronoun2");
+    pronouns.push(pronounOne, pronounTwo);
+    console.log(pronouns);
+  }
 }
 
 function getAdjectives() {
-  const adjectiveOne = getValue("adjective1");
-  const adjectiveTwo = getValue("adjective2");
-  adjectives.push(adjectiveOne, adjectiveTwo);
-  console.log(adjectives);
+  if (getValue("adjective1") === "" || getValue("adjective2") === 0) {
+    alert("Please, fill all the fields");
+  } else {
+    const adjectiveOne = getValue("adjective1");
+    const adjectiveTwo = getValue("adjective2");
+    adjectives.push(adjectiveOne, adjectiveTwo);
+    console.log(adjectives);
+  }
 }
 
 function getNouns() {
-  const nameOne = getValue("name1");
-  const nameTwo = getValue("name2");
-  nouns.push(nameOne, nameTwo);
-  console.log(nouns);
+  if (getValue("name1") === "" || getValue("name2") === 0) {
+    alert("Please, fill all the fields");
+  } else {
+    const nameOne = getValue("name1");
+    const nameTwo = getValue("name2");
+    nouns.push(nameOne, nameTwo);
+    console.log(nouns);
+  }
 }
 
 function setDomainNames() {
   getPronouns();
   getAdjectives();
   getNouns();
+
   const generateDomainNames = pronouns.map(function(valueOfPronoun) {
     adjectives.map(function(valueofAdjective) {
       nouns.map(function(valueOfNoun) {
