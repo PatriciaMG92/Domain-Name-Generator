@@ -25,11 +25,11 @@ const btn = document.getElementById("createDomainNames");
 const div = document.getElementById("domains");
 btn.addEventListener("click", all);
 
-function getValue(idInput) {
+const getValue = idInput => {
   return document.getElementById(idInput).value;
-}
+};
 
-function getPronouns() {
+const getPronouns = () => {
   if (getValue("pronoun1") === "" || getValue("pronoun2") === 0) {
     alert("Please, fill all the fields");
   } else {
@@ -38,9 +38,9 @@ function getPronouns() {
     pronouns.push(pronounOne, pronounTwo);
     console.log(pronouns);
   }
-}
+};
 
-function getAdjectives() {
+const getAdjectives = () => {
   if (getValue("adjective1") === "" || getValue("adjective2") === 0) {
     alert("Please, fill all the fields");
   } else {
@@ -49,9 +49,9 @@ function getAdjectives() {
     adjectives.push(adjectiveOne, adjectiveTwo);
     console.log(adjectives);
   }
-}
+};
 
-function getNouns() {
+const getNouns = () => {
   if (getValue("name1") === "" || getValue("name2") === 0) {
     alert("Please, fill all the fields");
   } else {
@@ -60,17 +60,17 @@ function getNouns() {
     nouns.push(nameOne, nameTwo);
     console.log(nouns);
   }
-}
+};
 
-function setDomainNames() {
+const setDomainNames = () => {
   getPronouns();
   getAdjectives();
   getNouns();
 
-  const generateDomainNames = pronouns.map(function(valueOfPronoun) {
-    adjectives.map(function(valueofAdjective) {
-      nouns.map(function(valueOfNoun) {
-        extensions.map(function(valueOfExtension) {
+  const generateDomainNames = pronouns.map(valueOfPronoun => {
+    adjectives.map(valueofAdjective => {
+      nouns.map(valueOfNoun => {
+        extensions.map(valueOfExtension => {
           const newResult = [
             ...result,
             valueOfPronoun + valueofAdjective + valueOfNoun + valueOfExtension
@@ -82,7 +82,7 @@ function setDomainNames() {
       });
     });
   });
-}
+};
 
 function all() {
   setDomainNames();
